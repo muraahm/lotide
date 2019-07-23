@@ -1,3 +1,17 @@
+function head(array) {
+  let head;
+  if (array && array.length) {
+    head = array[0] ;
+  }
+  else {
+    head = undefined;
+  }
+  return head;
+}
+assertEqual(head([5, 6, 7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+
+
 // FUNCTION IMPLEMENTATION
 const assertEqual = function (actual, expected) {
   const Pass = `Assertion Passed: ${actual} === ${expected}`;
@@ -9,9 +23,3 @@ assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 assertEqual("test", "test");
 assertEqual(1, 2);
-
-function head(array) {
-  return (array && array.length) ? array[0] : undefined;
-};
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
