@@ -1,18 +1,18 @@
 // test assertArraysEqual
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   } else {
-    for (i = 0; i < arr1.length; i++) {
+    for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] !== arr2[i]) {
         return false;
       }
     }
   }
-  return true
+  return true;
 };
 
-let assertArraysEqual = function (actual, expected) {
+let assertArraysEqual = function(actual, expected) {
   const result = eqArrays(actual, expected);
   if (result === true) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -22,11 +22,11 @@ let assertArraysEqual = function (actual, expected) {
 };
 
 //Actual function
-const takeUntil = function (array, callback) {
+const takeUntil = function(array, callback) {
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i])) {
       array.splice(i);
-      return array
+      return array;
     }
   }
 };
