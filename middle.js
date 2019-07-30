@@ -20,5 +20,6 @@ const middle = function(input) {
   }
 };
 
+
 module.exports = middle;
 
